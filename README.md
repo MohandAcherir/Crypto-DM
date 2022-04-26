@@ -11,13 +11,13 @@ le test de Fermat et le test de Miller-Rabin.
 2/ Miller-Rabin.
 
 La compilation se fait sur la ligne de commandes avec la commande : make                                                                                    
-Pour tester, toujours sur la ligne de commandes, on tape : ./tp nombre réps
+Pour tester, toujours sur la ligne de commandes, on tape : ./tp n k
 
 -"tp" : Le nom de l'éxecutable, qui signifie TestPrimalité.
 
--Le premier argument : nombre à tester.
+-Le premier argument n : nombre à tester.
 
--Le deuxième argument : nombre de répétition(facultatif).
+-Le deuxième argument k : nombre de répétition(facultatif, n-1 par défaut). Mais il voudrait mieux le mettre quand le nombre à tester est trop grand.
 
 
 3/ Square And Multiply: dans notre programme "SnM"
