@@ -207,9 +207,6 @@ int main(int argc, char** argv) {
 	mpz_init_set_str(deux, "2", 10);
 	mpz_init_set_str(un, "1", 10);
 	mpz_init_set_str(zero, "0", 10);
-	mpz_init_set_str(t, "7", 10);
-	mpz_init_set_str(neuf, "3", 10);
-	mpz_init_set_str(ss, "77", 10);
 	mpz_init(snm);
 
 	char str[10];
@@ -227,7 +224,7 @@ int main(int argc, char** argv) {
 		printf("Le nombre est pseudo-premier !\n");
 	}
 	else {
-		if(argc == 3) {
+		if(argc == 3) { // Si k est fourni
 			mpz_t k;
 			mpz_init(k);
 			mpz_set_ui(k, (int)atoi(argv[2]) - 1);
@@ -243,7 +240,7 @@ int main(int argc, char** argv) {
 			test_de_fermat(i, k);
 			mpz_clear(k);
 		}
-		else if(argc == 2){
+		else if(argc == 2){ // Si non K = n-1 par défaut 
 			mpz_t k;
 			mpz_init(k);
 			mpz_sub(k, i, un);
@@ -263,9 +260,6 @@ int main(int argc, char** argv) {
 
 	mpz_clear(i);
 	mpz_clear(tmp);
-	mpz_clear(t);
-	mpz_clear(neuf);
-	mpz_clear(ss);
 	mpz_clear(snm);
 	mpz_clear(zero);
 	mpz_clear(un);
